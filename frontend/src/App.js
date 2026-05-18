@@ -18,8 +18,9 @@ function App() {
 
   // ── FETCH NOTES ──────────────────────────────────────────
   useEffect(() => {
-    fetchNotes();
-  }, [filter, search]);
+  fetchNotes();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, [filter, search]);
 
   const fetchNotes = async () => {
     try {

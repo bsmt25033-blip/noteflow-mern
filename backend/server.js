@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 // ── DATABASE CONNECTION ───────────────────────────────────
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/noteflow')
+mongoose.connect('mongodb://127.0.0.1:27017/noteflow')
   .then(() => console.log('✅ MongoDB Connected'))
   .catch(err => console.error('❌ MongoDB Error:', err));
 
